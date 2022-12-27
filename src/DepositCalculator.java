@@ -17,7 +17,7 @@ public class DepositCalculator {
         return Math.round(value * ScaLe) / ScaLe;
     }
 
-    void dataEntryAndPrintResults() {
+    void dataEntryAndPrintResults() { // Если в название метода хочется добавить and - значит такой метод нужно разбить на два.
         int amountInRubles;
         int termDepositInRubles;
         int typeOfDeposit;
