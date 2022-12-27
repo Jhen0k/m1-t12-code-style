@@ -9,7 +9,7 @@ public class Program {
             String amount = scanner.next();
 
             System.out.println("Введите срок вклада в годах:");
-            String period = scanner.next( );
+            String period = scanner.next();
 
             System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
             String action = scanner.next();

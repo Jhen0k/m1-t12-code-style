@@ -1,7 +1,7 @@
 public class DepositCalculator {
     private double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
-        double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
-        return getRandomScale(pay, 2);
+        double result = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
+        return getRandomScale(result, 2);
     }
 
     private double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
