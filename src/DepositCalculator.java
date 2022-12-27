@@ -18,11 +18,14 @@ public class DepositCalculator {
         double amountPlusPercentage = 0;
 
         switch (deposit.getAction()) {
-            case 1: amountPlusPercentage = calculateSimplePercent(deposit.getAmount(), 0.06, deposit.getPeriod());
-                    break;
-            case 2: amountPlusPercentage = calculateComplexPercent(deposit.getAmount(), 0.06, deposit.getPeriod());
-                    break;
-            default: System.out.println("Ошибка!: Выберите тип вклада, 1 - вклад с обычным процентом, "
+            case 1:
+                amountPlusPercentage = calculateSimplePercent(deposit.getAmount(), 0.06, deposit.getPeriod());
+                break;
+            case 2:
+                amountPlusPercentage = calculateComplexPercent(deposit.getAmount(), 0.06, deposit.getPeriod());
+                break;
+            default:
+                System.out.println("Ошибка!: Выберите тип вклада, 1 - вклад с обычным процентом, "
                         + "2 - вклад с капитализацией");
         }
         System.out.println("Результат вклада: " + deposit.getAmount() + " за "
