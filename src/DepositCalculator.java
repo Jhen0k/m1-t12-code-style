@@ -8,8 +8,8 @@ public class DepositCalculator {
         return getRandomScale(amount + amount * yearRate * depositPeriod, 2);
     }
 
-    private double getRandomScale(double value, int places) {
-        double scale = Math.pow(10, places);
+    private double getRandomScale(double value, int degree) {
+        double scale = Math.pow(10, degree);
         return Math.round(value * scale) / scale;
     }
 
