@@ -8,13 +8,13 @@ public class DepositCalculator {
         return roundCalculate(resultCalculate, degree);
     }
 
-    double calculateSimplePercentFunction(double doubleAmount, double yearRate, int deposit_period) {
-        return roundCalculate(doubleAmount + doubleAmount * yearRate * deposit_period, degree);
+    double calculateSimplePercentFunction(double doubleAmount, double yearRate, int depositPeriod) {
+        return roundCalculate(doubleAmount + doubleAmount * yearRate * depositPeriod, degree);
     }
 
     double roundCalculate(double value, int places) {
-        double ScaLe = Math.pow(10, places);
-        return Math.round(value * ScaLe) / ScaLe;
+        double scaLe = Math.pow(10, places);
+        return Math.round(value * scaLe) / scaLe;
     }
 
     void dataEntryAndPrintResults() {
@@ -32,8 +32,11 @@ public class DepositCalculator {
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         typeOfDeposit = scanner.nextInt();
         if (typeOfDeposit == 1) {
+
             depositIncome = calculateSimplePercentFunction(amountInRubles, yearRate, termDepositInRubles);
+
         } else if (typeOfDeposit == 2) {
+
             depositIncome = calculateComplexPercentFunction(amountInRubles, yearRate, termDepositInRubles);
         }
         System.out.println("Результат вклада: " + amountInRubles + " за " + termDepositInRubles + " лет превратятся в "
