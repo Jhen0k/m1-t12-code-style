@@ -1,4 +1,4 @@
-public class DepositCalculator {
+public class DepositCalculator { // После класса надо ставить пустую строку
     private double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
         double result = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
         return getRandomScale(result, 2);
